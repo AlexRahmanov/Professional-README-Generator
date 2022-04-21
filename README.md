@@ -30,5 +30,5 @@
      download the file or clone the repo and then run the command "node index"
 ## Questions
 If you have any questions reach me @ 
-Email: [archana.nagaraj@gmail.com](mailto:alex@gmail.com)
-Github : [archana-nagaraj](https://github.com/AlexRahmanov)
+Email: [My E-mail](mailto:alex@gmail.com)
+Github : [GitHub Page](https://github.com/AlexRahmanov)

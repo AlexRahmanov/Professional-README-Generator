@@ -95,9 +95,9 @@ function generateMarkdown(data) {
   ## Tests
      ${data.tests}
 ## Questions
-If you have any questions reach me @ 
-Email: [archana.nagaraj@gmail.com](mailto:${data.email})
-Github : [archana-nagaraj](https://github.com/${data.username})
+If you have any questions reach me by
+Email: [My E-mail](mailto:${data.email})
+Github : [GitHub Page](https://github.com/${data.username})
 `;
 }
 

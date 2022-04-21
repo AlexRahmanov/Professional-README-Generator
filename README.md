@@ -44,7 +44,7 @@ THEN I am taken to the corresponding section of the README
   ## License
   This repository is covered under the license 'MIT License
   ' 
-  Refer https://opensource.org/licenses/MIT for more detailed info 
+  Refer https://opensource.org/licenses for more detailed info 
     
   
   ## Contribution

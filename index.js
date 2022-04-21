@@ -8,25 +8,12 @@ const questions = [
 {
     type: 'input',
     name: 'title',
-    message: 'What is the title of your project? (Required)',
+    message: 'What is the name of your project? (Required)',
     validate: titleInput => {
         if (titleInput) {
             return true;
-            } else {
-                console.log('Please enter your project title!');
-                return false;
-            }
-        }
-    },
-{
-    type: 'input',
-    name: 'userName',
-    message: 'Please enter your name? (Required)',
-    validate: userNameInput => {
-        if (userNameInput) {
-            return true;
         } else {
-            console.log('Please enter your name!');
+            console.log('Please enter the name of the project!');
             return false;
         }
     }
@@ -35,12 +22,12 @@ const questions = [
 {
     type: 'input',
     name: 'description',
-    message: 'Provide a description of your project:',
-    validate: descriptionInput => {
-        if (descriptionInput) {
+    message: 'Please enter a description for your project:(Required)',
+    validate: description => {
+        if (description) {
             return true;
         } else {
-            console.log('You need to enter a project description!');
+            console.log('Please enter a few words about the project!');
             return false;
         }
     }
@@ -49,57 +36,68 @@ const questions = [
 {
     type: 'input',
     name: 'installation',
-    message: 'What are the steps required to install your project?'
-},
+    message: "Please enter installation instructions for your project: (Required)",
+    validate: installationCommands => {
+        if (installationCommands) {
+            return true;
+        } else {
+            console.log('Please enter the necessary instructions for installation!');
+            return false;
+        }
+    }
+},  
 
 {
     type: 'input',
     name: 'usage',
-    message: 'Please provide examples of usage instructions'
-},
-
-{
-    type: 'input',
-    name: 'contribution',
-    message: 'Please enter your contribution guidelines:'
-},
-
-{
-    type: 'input',
-    name: 'tests',
-    message: 'Please provide test instructions for this system:'
-},
+    message: "Please enter usage details for your project:(Required)",
+    validate: usage => {
+        if (usage) {
+            return true;
+        } else {
+            console.log("Please enter the necessary project's usage detail!");
+            return false;
+        }
+    }
+}, 
 
 {
     type: 'list',
     name: 'license',
-    message: 'Does this application have a license?',
-    choices: [{name:'MIT', value: 'MIT',}, {name: 'GPL 3.0', value: 'GPL_3.0'}, {name: 'Apache-2.0', value: 'Apache-2.0'}, {name: 'ISC', value: 'ISC'}, {name: 'NTP', value: 'NTP'}, {name: 'Aladdin', value: 'Aladdin'}, {name:'none', value: null}]
+    message: "Choose the license for the project:",
+    choices: [
+        "GNU GPLv3",
+        "Mozilla Public License 2.0",
+        "Apache License 2.0",
+        "MIT License",
+        "Boost Software License 1.0",
+        "The Unlicense",
+        "BSD 3-Clause"
+    ]
 },
 
 {
     type: 'input',
-    name: 'github',
-    message: 'Enter your GitHub Username (Required)',
-    validate: githubInput => {
-        if (githubInput) {
-            return true;
-        } else {
-            console.log('Please enter your GitHub username!');
-            return false;
-        }
-    }
+    name: 'contributing',
+    message: "Please enter details for contributing to your project:(Required)"
+},
+
+
+{
+    type: 'input',
+    name: 'tests',
+    message: "Please enter details for testing your project:(Required)"
 },
 
 {
     type: 'input',
-    name: 'githublink',
-    message: 'Enter your GitHub profile link (Required)',
-    validate: githubLink => {
-        if (githubLink) {
+    name: 'username',
+    message: "Enter your github username:(Required)",
+    validate: username => {
+        if (username) {
             return true;
         } else {
-            console.log('Please enter your GitHub profile link!');
+            console.log('Please enter the github username!');
             return false;
         }
     }
@@ -108,12 +106,12 @@ const questions = [
 {
     type: 'input',
     name: 'email',
-    message: 'Enter your email address (Required)',
-    validate: emailInput => {
-        if (emailInput) {
+    message: "Enter your email address:(Required)",
+    validate: email => {
+        if (email) {
             return true;
         } else {
-            console.log('Please enter your email address!');
+            console.log('Please enter the email address!');
             return false;
         }
     }
@@ -121,22 +119,36 @@ const questions = [
 
 ];
 
+
 // TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {
-    fs.writeFile(fileName, data, err => {
-        if (err) throw new Error(err);
-        
-        console.log('Page created! Check out README.md in this directory to see it!');
-    })        
-};
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, function(err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log('Success! README.md file is created in the folder');
+    });
+}
+
 
 // TODO: Create a function to initialize app
-const init = () => {
-    inquirer.prompt(questions).then(data => {
-        const pageMD = generateMarkdown(data);
-        writeToFile('./README.md', pageMD)
+function init() {
+    console.log("Welcome to Professional README Generator! Please answer the questions you see in the prompt.");
+    inquirer
+    .prompt(questions)
+    .then(answers => {
+        const readmeContent = generateMarkdown(answers);
+        writeToFile('./README.md', readmeContent);
     })
-};
+
+    .catch(error => {
+        if(error.isTtyError) {
+        } else {
+
+        }
+    });
+}
+
 
 // Function call to initialize app
 init();

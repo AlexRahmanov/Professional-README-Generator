@@ -1,26 +1,34 @@
-# Professional-README-Generator
-![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=plastic&logo=appveyor)
-#### by Alex Ram
-### **Table of Contents**
-##### 1. [Description](#Description)
-##### 2. [Installation](#Installation)
-##### 3. [Usage](#Usage)
-##### 4. [Contributing](#Contributing) 
-##### 5. [Tests](#Tests)
-##### 6. [Questions](#Questions)
-##### 7. [License](#License)
-## ***Description***
-#### Generate a README
-## ***Installation***
-#### The steps required to install the project include: none
-## ***Usage***
-#### Examples and instructions for use include: test
-## ***Contributing***
-#### Contributing guidelines include: 1...2...3...
-## ***Tests***
-#### Automated tests for this system can be run by: no instruction
-## ***Questions***
-#### If you have additional questions, please email Alex Ram at: <alex@gmail.com>
-#### More work by Alex Ram can be viewed at the [AlexRahmanov GitHub repository](https://github.com/AlexRahmanov)
-## ***License***
-    This application includes the following license: MIT
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  #  Project Title
+     Professional README Generator
+    
+  ##  Description
+    A key component of your profile, and one that many new developers overlook, is the README file that's associated with each respository. A README file acts like a virtual storefront to a repository—it's the first thing that a person sees when they visit a repo on GitHub. But it's also much more than that: README files contain essential information about the repo's project. Thus, the quality of a README file can differentiate a high-quality repo from a low-quality one.
+  ## Table of Contents
+  * [Description](#description)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contribution](#contribution)
+  * [Usage](#usage)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  ## Installation
+  To install dependencies, run the below command :
+      npm init
+  ## Usage
+     Run the application in command prompt with "node index" or "node index.js
+  ## License
+  This repository is covered under the license 'MIT License
+  ' 
+  Refer https://opensource.org/licenses/MIT for more detailed info 
+    
+  
+  ## Contribution
+     A GitHub profile with consistently high-quality README files is sure to help you stand out among the crowd of developers putting their work on GitHub, so make sure you give these important files the time and attention they deserve.
+  ## Tests
+     download the file or clone the repo and then run the command "node index"
+## Questions
+If you have any questions reach me @ 
+Email: [archana.nagaraj@gmail.com](mailto:alex@gmail.com)
+Github : [archana-nagaraj](https://github.com/AlexRahmanov)

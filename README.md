@@ -1,10 +1,10 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   #  Project Title
-     Professional README Generator
+     Test 1
     
   ##  Description
-    A key component of your profile, and one that many new developers overlook, is the README file that's associated with each respository. A README file acts like a virtual storefront to a repository—it's the first thing that a person sees when they visit a repo on GitHub. But it's also much more than that: README files contain essential information about the repo's project. Thus, the quality of a README file can differentiate a high-quality repo from a low-quality one.
+    Test 2
   ## Table of Contents
   * [Description](#description)
   * [Usage](#usage)
@@ -15,9 +15,9 @@
   * [Questions](#questions)
   ## Installation
   To install dependencies, run the below command :
-      npm init
+    Test 3
   ## Usage
-     Run the application in command prompt with "node index" or "node index.js
+     Test 4
   ## License
   This repository is covered under the license 'MIT License
   ' 
@@ -25,10 +25,10 @@
     
   
   ## Contribution
-     A GitHub profile with consistently high-quality README files is sure to help you stand out among the crowd of developers putting their work on GitHub, so make sure you give these important files the time and attention they deserve.
+     Test 5
   ## Tests
-     download the file or clone the repo and then run the command "node index"
+     Test 6
 ## Questions
-If you have any questions reach me @ 
-Email: [My E-mail](mailto:alex@gmail.com)
-Github : [GitHub Page](https://github.com/AlexRahmanov)
+If you have any questions reach me by
+Email: [My E-mail](mailto:Test 8)
+Github : [GitHub Page](https://github.com/Test 7)
